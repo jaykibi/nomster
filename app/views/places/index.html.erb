@@ -3,9 +3,7 @@
     <h1><%= place.name %></h1>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
-
-  </div>
-  
+    </div>
 <% end %>
 
-
+<div class="flickr_pagination col-2 offset-5"><%= will_paginate @places %></div>
