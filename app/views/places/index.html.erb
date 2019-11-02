@@ -14,11 +14,11 @@
               <b><%= place.comments.last.humanized_rating %></b> -
             <% end %>
             <%= place.comments.last.message %>
-            <small><%= place.comments.last.user.email %></small>
-
-            <%= image_tag place.photos.last.picture.url, class: 'img-avatar' %>
-            
+            <small><%= place.comments.last.user.email %></small>            
           </blockquote>
+          <div>
+          <%= image_tag place.photos.last.picture.url, class: 'img-avatar' %>
+          </div>
         </div>
        <% end %> 
     </div>
@@ -26,3 +26,5 @@
 
 
 <div class="flickr_pagination col-2 offset-5"><%= will_paginate @places %></div>
+
+<!-- having bug/issue with the image_tag code, when user doesnt upload a picture to the app, the app's index page will crash and not work, however places pages work, so if user has url to a specific place the app will work, only the index page will not work --> 
